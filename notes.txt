@@ -1,0 +1,5 @@
+_____ TO DOS _____
+- clear comments out from karel
+- add good explanatory comments if needed
+- make sure your return zeroes and breaks are where appropriate
+- break into a third helper function if possible

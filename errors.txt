@@ -1,0 +1,9 @@
+______Programming errors I made along the way______
+- trying to initialize strings to NULL, when string are objects in CPP and not
+    pointers
+- forgetting to pass a parameter in my function call
+- forgetting end of line semicolon;
+- spending too long trying to make the code look prettier and more modular when
+    there is only so modular I can make it without structs or objects when I
+    need to keep track of multiple variables. and bitswapping on the first
+    project is overkill.
