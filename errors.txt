@@ -10,3 +10,4 @@ ______Programming errors I made along the way______
 - I don't need to santize inputs with the same level of vigilance if used to
     from C because cin is really pretty great about doing that for me
 - returning the wrong variable
+- forgetting to return 0 from the end of main

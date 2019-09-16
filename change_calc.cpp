@@ -16,7 +16,7 @@ void     make_change(int change)
         num_of_coins = change / coin_amounts[i];
         change %= coin_amounts[i];
         cout << num_of_coins << " " << coin_names[i];
-        if (num_of_coins > 1)
+        if (num_of_coins != 1)
             cout << "s";
         cout << endl;
     }
@@ -59,3 +59,4 @@ int     main()
 // future improvements vv
 // smaller main?
 // take in float input and convert to int for maths
+// change ur function names
