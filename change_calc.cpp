@@ -13,7 +13,7 @@ void     make_change(int change)
 
     for (int i = 0; i < COINS; i++)
     {
-        num_of_coins = change / coin_amounts[i];
+        num_of_coins = change / coin_amounts[i]; 
         change %= coin_amounts[i];
         cout << num_of_coins << " " << coin_names[i];
         if (num_of_coins != 1)

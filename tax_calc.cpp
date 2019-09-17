@@ -5,6 +5,25 @@ using namespace std;
 
 const int TAX_BRACKETS = 6;
 
+double       print_moneys(int money)
+{
+    cout << "1.DEBUG - money == " << money << endl;
+    double con_centavos = static_cast<double>(money);
+    
+    cout << "2.DEBUG - money == " << con_centavos << endl; 
+    con_centavos /= 100.00;
+    cout << "3.DEBUG - money == " << con_centavos << endl;
+    return con_centavos;
+}
+
+void        display_results(int income, int deductions)
+{
+    cout << "given that your income is " << print_moneys(income)
+        << endl << "your deductions are " << print_moneys(deductions)
+        << endl << "so your amount earned after deductions is "
+        << print_moneys(income - deductions) << endl;
+}
+
 int         get_income()
 {
     int income;
@@ -12,7 +31,7 @@ int         get_income()
     cout << "welcome to *.*.TAX CALCULATOR.*.* ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ"
         << endl << " please enter your yearly income without decimals"
         << endl;
-    cin << income;
+    cin >> income;
     if ( income < 0)
     {
         cout << "you have entered invalid input. please try again."
@@ -44,15 +63,6 @@ int         calc_deductions(int income)
     return deductions;
 }
 
-void        display_results(int income, int deductions)
-{
-    cout << your 
-}
-
-void        print_moneys(int money)
-{
-    float con_centavos = 
-}
 
 int         main()
 {
