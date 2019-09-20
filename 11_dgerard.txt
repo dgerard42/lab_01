@@ -1,0 +1,17 @@
+_____ Algorithm for the Nth smallest number in array _____
+With a Max Heap
+1. Create an array of N pointers for a heap
+2. Traverse through the array of M numbers
+3. For each number in the array, compare it to to the top number in the heap
+4. If the heap is empty, place the array number at the top of the heap
+5. Else, if the current array number is smaller than the top heap number, place the new number
+    at the top of the heap, and shift all lower elements of the heap down, removing the lowest
+    element.
+6. Else, if the number is larger, traverse down the heap until N elements of the heap have been
+    traversed through and checked against. If any of the numbers in the heap are higher than
+    the current array number, then place the new array number into a node above that number,
+    move down all the lower elements in the heap, and take the highest number off the end.
+7. The number at the bottom of the heap at the end of this proccess will be the Nth smallest
+    number in the array.
+
+source == youtube.com/watch?v=hGK_5n81drs

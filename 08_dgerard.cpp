@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 int         dumb_multiplication(int num_1, int num_2)
 {
     int result = 0;

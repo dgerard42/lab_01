@@ -1,0 +1,17 @@
+_____ Algorithm for a phonebook _____
+Creating the database and entering data
+1. Create an array of 1024 pointers
+2. For each entry, allocate a linked list node and put data inside
+4. Add all characters in the name together, and then modulo by 1024
+5. Go to the pointer indexed at the number calculated in step 4
+6. Set that pointer to point to your new linked list node
+7. If there is already node(s) pointed to by the pointer, traverse to the end of the linked list
+    and add the new node to the end
+Retrieving data
+1. User enters the name of the person whose number they are searching for
+2. Add all of the ascii character numbers of the name together and then modulo by 1024
+3. Go to the pointer at the index for the result of step 2
+4. Traverese through the linked list nodes at that pointer until matching name is found
+5. Print the number associated with that name
+
+source == youtube.com/watch?v=KyUTuwz_b7Q 

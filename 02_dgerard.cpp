@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include <limits.h>
 
 using namespace std;
 
@@ -20,5 +19,5 @@ int main()
     cin >> x2 >> y2; 
     distance = sqrt((pow((x1 - x2), 2)) + pow((y1 - y2), 2));
     cout << "the distance between those 2 points is " << distance << endl;
-    return (0);
+    return 0;
 }

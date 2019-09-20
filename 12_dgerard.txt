@@ -1,0 +1,19 @@
+______Programming errors I made along the way______
+>> Careless / trivial errors
+- Trying to initialize strings to NULL, when string are objects in CPP and not
+    pointers.
+- Forgetting to pass a parameter in my function call.
+- Forgetting end of line semicolon.
+>> Bugs caused by bad habits && how to correct them
+- Returning the wrong variable - makes sure that when I write a function, the
+    first thing I write is the initialization of the return variable and the
+    reuturn statement.
+- Forgetting to return 0 from the end of main, and forgetting to return; from
+    void functions - make sure that I write a return statement at the end of
+    each function and main as one of the first thing I do when writing a
+    function
+- Using magic numbers - replacing them with global const variables
+- Using single letter indexes - replacing with descriptive ones
+- Trying to do conversion between int/long and float/double. Instead, I should
+    write code from the beginning to avoid float/double if possible.
+

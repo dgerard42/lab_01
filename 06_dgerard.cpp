@@ -5,23 +5,22 @@ using namespace std;
 
 const int TAX_BRACKETS = 6;
 
-double       print_moneys(int money)
+void       print_moneys(int money)
 {
-    cout << "1.DEBUG - money == " << money << endl;
-    double con_centavos = static_cast<double>(money);
-    
-    cout << "2.DEBUG - money == " << con_centavos << endl; 
-    con_centavos /= 100.00;
-    cout << "3.DEBUG - money == " << con_centavos << endl;
-    return con_centavos;
+    cout << (money / 100) << "." <<  (money % 100);
+    return;
 }
 
 void        display_results(int income, int deductions)
 {
-    cout << "given that your income is " << print_moneys(income)
-        << endl << "your deductions are " << print_moneys(deductions)
-        << endl << "so your amount earned after deductions is "
-        << print_moneys(income - deductions) << endl;
+    cout << "given that your income is ";
+    print_moneys(income);
+    cout << endl << "your deductions are ";
+    print_moneys(deductions);
+    cout << endl << "so your amount earned after deductions is ";
+    print_moneys(income - deductions);
+    cout << endl;
+    return;
 }
 
 int         get_income()
@@ -47,16 +46,16 @@ int         calc_deductions(int income)
     int rates[TAX_BRACKETS] = {0, 10, 20, 30, 40};
     int ranges[TAX_BRACKETS] = {3000000, 5000000, 10000000, 20000000, 25000000};
     
-    for (int i = 0; i < TAX_BRACKETS; i++)
+    for (int index = 0; index < TAX_BRACKETS; index++)
     {
-        if (income - ranges[i] >= 0)
+        if (income - ranges[index] >= 0)
         {
-            deductions += ((ranges[i] / 100) * rates[i]);
-            remaining_income -= ranges[i];
+            deductions += ((ranges[index] / 100) * rates[index]);
+            remaining_income -= ranges[index];
         }
         else
         {
-            deductions += ((remaining_income / 100) * rates[i]);
+            deductions += ((remaining_income / 100) * rates[index]);
             break;
         }
     } 
@@ -70,7 +69,10 @@ int         main()
     int deductions;
 
     income = get_income();
-    deductions = calc_deductions(income);
-    display_results(income, deductions);
+    if (income >= 0)
+    {
+        deductions = calc_deductions(income);
+        display_results(income, deductions);
+    }
     return 0;
 }

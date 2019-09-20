@@ -20,6 +20,7 @@ void    displayMap(int karelRow, int karelColumn, string karelFacing)
 {
     cout << ">>Karel is at x=" << karelColumn << " y=" << karelRow;
     cout << " and they are facing " << karelFacing << "." << endl;
+    return;
 }
 
 int     main()
@@ -47,7 +48,7 @@ int     main()
             if (karelRow > 7 || karelRow < 0 || karelColumn > 7 || karelRow < 0)
             {
                 cout << ">>ouch. I have crashed. shutting down" << endl;
-                break; //might need to be a return 0
+                break;
             }
         } 
         else if (input == "turnLeft();")
@@ -55,7 +56,7 @@ int     main()
         else if (input == "quit")
         {
             cout << ">>goodbye friend" << endl;
-            break; //might need to be a return 0
+            break;
         }
         else
         {

@@ -23,6 +23,7 @@ void    print_message(char grade)
         default:
             cout << "Error. Invalid grade" << endl;
     }
+    return;
 }
 
 char    determine_grade(int score)
@@ -67,9 +68,7 @@ int     main()
     int     score;
 
     score = get_score();
-    cout << "DEBUG 00 score=" << score << endl;
     grade = determine_grade(score);
-    cout << "DEBUG 01 grade=" << grade << endl;
     print_message(grade);
     return 0;
 }

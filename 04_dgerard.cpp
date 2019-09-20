@@ -4,33 +4,33 @@
 
 using namespace std;
 
-int     circumference(int radius)
+double     circumference(double radius)
 {
-    int circumference;
+    double circumference;
     
     circumference = 2 * M_PI * radius; 
     return circumference;
 }
 
-int     area(int radius)
+double     area(double radius)
 {
-    int area;
+    double area;
     
     area = M_PI * pow(radius, 2);
     return area;
 }
 
-int     volume(int radius)
+double     volume(double radius)
 {
-    int volume;
+    double volume;
     
     volume = (4 * M_PI * pow(radius, 3)) / 3;
     return volume;
 }
 
-int     surface_area(int radius)
+double     surface_area(double radius)
 {
-    int s_area;
+    double s_area;
 
     s_area = 4 * M_PI * pow(radius, 2);
     return s_area;
@@ -38,7 +38,7 @@ int     surface_area(int radius)
 
 int     main()
 {
-    int radius = 0;
+    double radius = 0;
 
     cout << "welcome to the circle / sphere calculator ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ" << endl;
     cout << "enter a number to use as a radius:" << endl;
